@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Friend Finder</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+
+<body style="background-color: #d0ff00 !important">
+
+  <div class="container" style="text-align:right; color: orange !important">
+    <a href="/api/friends">Friends API</a>
+    <span>|</span>
+    <a href="https://github.com/qmiko/FriendFinder">GitHub Link</a>
+  </div>
+
+  <div class="container">
+
+    <div class="jumbotron" style="background-color: #f542d1;  color: white !important">
+
+      <h1 style="text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        Compatability Quiz
+      </h1>
+
+      <p style="text-align: center">Answer the following questions to be matched with a new buddy!
+        <br>
+        1 = Strongly Disagree | 5 = Strongly Agree</p>
+
+    </div>
+
+
+    <h5>Name:</h5>
+    <input type="text" id="name" class="form-control" placeholder="Lady Gaga" required>
+    <br>
+    <h5>Photo:</h5>
+    <input type="text" id="photo" class="form-control" placeholder="Link To JPG Image" required>
+    <br>
+
+    <div class="form-group">
+
+      <label for="question1">Do you consider yourself spontaneous?</label>
+      <select class="form-control" id="question1">
+        <option value=""></option>
+        <option value="1">1 </option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question2">Are you a feminist?</label>
+      <select class="form-control" id="question2">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question3">You care about the environment.</label>
+      <select class="form-control" id="question3">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question4">Family is a priority for you.</label>
+      <select class="form-control" id="question4">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question5">Emotional intelligence is important to you.</label>
+      <select class="form-control" id="question5">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question6">Conspiracy theories are lame.</label>
+      <select class="form-control" id="question6">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question7">You enjoy watching Romantic Comedies.</label>
+      <select class="form-control" id="question7">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question8">You love the arts!</label>
+      <select class="form-control" id="question8">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question9">You are Introverted.</label>
+      <select class="form-control" id="question9">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question10">You are Extroverted.</label>
+      <select class="form-control" id="question10">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <button type="submit" class="btn btn-dark btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+      aria-hidden="true"></i>
+    Submit
+  </button>
+
+  </div>
+
+  <div id="quizResults" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h2 id="yourMatch"></h2>
+            <img id="friendImg" src="#">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-------JAVASCRIPT---------->
+
+  <script type="text/javascript">
+
+  //Unable to figure out how to get  y on click function to execute...
+
+    $("#submit").on("click", function (event) {
+
+      event.preventDefault();
+      var valid = true;
+      if ($("#name").val() === "" || $("#photo").val() === "") {
+        valid = false;
+      }
+      else if ($("#question1").val() === "empty"
+        || $("#question2").val() === "empty" ||
+        $("#question3").val() === "empty"
+        || $("#question4").val() === "empty" ||
+        $("#question5").val() === "empty"
+        || $("#question6").val() === "empty" ||
+        $("#question7").val() === "empty"
+        || $("#question8").val() === "empty" ||
+        $("#question9").val() === "empty"
+        || $("#question10").val() === "empty") {
+        valid = false;
+      }
+
+      //Add New User
+      if (valid === true) {
+        var addUserData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#question1").val(),
+            $("#question2").val(),
+            $("#question3").val(),
+            $("#question4").val(),
+            $("#question5").val(),
+            $("#question6").val(),
+            $("#question7").val(),
+            $("#question8").val(),
+            $("#question9").val(),
+            $("#question10").val()
+          ]
+        };
+
+        //AJAX
+        $.post("/api/friends", addUserData, function (data) {
+
+          $("#yourMatch").text(data.name);
+          $("#friendImg").attr("src", data.photo);
+          $("#quizResults").modal("toggle");
+
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
